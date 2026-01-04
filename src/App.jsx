@@ -18,8 +18,8 @@ const App = () => {
     let newFood;
     do {
       newFood = {
-        x: Math.floor(Math.random() * boardSize),
-        y: Math.floor(Math.random() * boardSize),
+        x: Math.floor(Math.random() * (boardSize - 2)) + 1,
+        y: Math.floor(Math.random() * (boardSize - 2)) + 1,
       };
     } while (snake.some(segment => segment.x === newFood.x && segment.y === newFood.y));
     return newFood;
@@ -35,8 +35,8 @@ const App = () => {
     let newFood;
     do {
       newFood = {
-        x: Math.floor(Math.random() * boardSize),
-        y: Math.floor(Math.random() * boardSize),
+        x: Math.floor(Math.random() * (boardSize - 2)) + 1,
+        y: Math.floor(Math.random() * (boardSize - 2)) + 1,
       };
     } while (initialSnake.some(segment => segment.x === newFood.x && segment.y === newFood.y));
 
